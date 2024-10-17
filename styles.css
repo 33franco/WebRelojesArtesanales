@@ -2,16 +2,16 @@ body {
     font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #e4b78e; /* Color madera */
+    background-color: #e4b78e; 
 }
 
 header {
     background: #333;
     color: #fff;
-    position: fixed; /* Fijar el menú en la parte superior */
-    width: 100%; /* Asegurarse de que ocupe todo el ancho */
-    top: 0; /* Posición en la parte superior */
-    z-index: 1000; /* Asegurarse de que esté por encima de otros elementos */
+    position: fixed; 
+    width: 100%; 
+    top: 0; 
+    z-index: 1000; 
 }
 
 nav {
@@ -38,17 +38,17 @@ nav ul {
     list-style-type: none;
     padding: 0;
     position: absolute;
-    top: 50px; /* Ajuste para que el menú se despliegue debajo del botón */
+    top: 50px; 
     left: 0;
     background-color: #333;
     width: 100%;
-    visibility: hidden; /* Oculto por defecto */
+    visibility: hidden; 
     opacity: 0;
     transition: visibility 0s, opacity 0.5s linear;
 }
 
 nav ul.visible {
-    visibility: visible; /* Visible cuando se activa */
+    visibility: visible; 
     opacity: 1;
 }
 
@@ -61,9 +61,9 @@ nav ul li a {
     text-decoration: none;
     display: block;
     padding: 10px;
-    text-align: center; /* Centrar texto */
-    width: 100%; /* Ocupar todo el ancho */
-    font-size: 1.5em; /* Aumentar tamaño de fuente */
+    text-align: center; 
+    width: 100%; 
+    font-size: 1.5em; 
 }
 
 nav ul li a:hover {
@@ -72,64 +72,64 @@ nav ul li a:hover {
 
 .social-icons {
     display: flex;
-    gap: 15px; /* Espacio entre íconos */
-    align-items: center; /* Centrar verticalmente */
+    gap: 15px; 
+    align-items: center; 
 }
 
 .social-icon {
-    color: white; /* Color de los íconos */
-    font-size: 1.5em; /* Tamaño de los íconos */
-    transition: color 0.3s; /* Transición suave */
+    color: white;
+    font-size: 1.5em; 
+    transition: color 0.3s; 
 }
 
 .social-icon:hover {
-    color: #ffcc00; /* Color al pasar el mouse */
+    color: #ffcc00; 
 }
 
 main {
-    background-color: #f4f4f4; /* Fondo suave para el contenido */
+    background-color: #f4f4f4; 
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin: 80px 20px 20px; /* Margen superior para evitar que el contenido se superponga al menú */
+    margin: 80px 20px 20px; 
 }
 
 h1, h2, h3, p {
-    text-align: center; /* Centrar todos los textos */
+    text-align: center; 
     margin: 10px 0;
 }
 
 h1 {
-    font-family: 'Playfair Display', serif; /* Fuente más artesanal */
-    font-size: 3em; /* Tamaño de fuente grande */
-    color: #6b4f4f; /* Color cálido */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Sombra para el texto */
-    margin-bottom: 20px; /* Espacio debajo del título */
-    padding: 20px; /* Espacio interno */
-    background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco semitransparente */
-    border-radius: 15px; /* Bordes redondeados */
-    border: 5px solid #8B5A2B; /* Color madera algarrobo */
-    transition: transform 0.3s, box-shadow 0.3s; /* Transición suave */
+    font-family: 'Playfair Display', serif; 
+    font-size: 3em; 
+    color: #6b4f4f; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); 
+    margin-bottom: 20px; 
+    padding: 20px; 
+    background-color: rgba(255, 255, 255, 0.8); 
+    border-radius: 15px; 
+    border: 5px solid #8B5A2B; 
+    transition: transform 0.3s, box-shadow 0.3s; 
 }
 
 h1:hover {
-    transform: scale(1.05); /* Efecto de aumento al pasar el mouse */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada */
+    transform: scale(1.05); 
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); 
 }
 
 h2 {
     font-family: 'Playfair Display', serif;
-    font-size: 2.5em; /* Tamaño de la fuente */
-    color: #8B5A2B; /* Color madera */
-    margin-bottom: 20px; /* Espacio inferior */
-    position: relative; /* Necesario para subrayado */
-    cursor: pointer; /* Cambiar el cursor al pasar por el h2 */
-    transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out; /* Transiciones para cambios de color y sombra */
+    font-size: 2.5em; 
+    color: #8B5A2B; 
+    margin-bottom: 20px; 
+    position: relative; 
+    cursor: pointer; 
+    transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out; 
 }
 
 h2:hover {
-    color: #6b4f4f; /* Cambia a un tono más oscuro */
-    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2); /* Añade una sombra suave */
+    color: #6b4f4f; 
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2); 
 }
 
 h2::after {
@@ -137,92 +137,92 @@ h2::after {
     position: absolute;
     width: 0;
     height: 4px;
-    background-color: #8B5A2B; /* Color de la línea de subrayado */
+    background-color: #8B5A2B; 
     bottom: 0;
     left: 50%;
-    transition: width 0.3s ease, left 0.3s ease; /* Transición de expansión */
+    transition: width 0.3s ease, left 0.3s ease; 
 }
 
 h2:hover::after {
-    width: 100%; /* Subrayado completo */
-    left: 0; /* Iniciar desde la izquierda */
+    width: 100%; 
+    left: 0; 
 }
 
 p {
-    font-family: 'Georgia', serif; /* Fuente elegante y clásica */
-    font-size: 1.2em; /* Tamaño de fuente ligeramente mayor para destacar el texto */
-    color: #4B3621; /* Color marrón oscuro que evoca madera */
-    background-color: #f4f1ea; /* Fondo suave, similar a papel reciclado */
+    font-family: 'Georgia', serif; 
+    font-size: 1.2em; 
+    color: #4B3621; 
+    background-color: #f4f1ea; 
     padding: 20px;
-    line-height: 1.6; /* Mejorar la legibilidad */
-    border-left: 5px solid #8B5A2B; /* Borde izquierdo en color madera algarrobo */
-    border-radius: 8px; /* Bordes redondeados para suavizar el diseño */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera para dar profundidad */
-    margin: 20px 0; /* Separación del párrafo con otros elementos */
-    text-align: justify; /* Alinear el texto para un aspecto más formal */
+    line-height: 1.6;
+    border-left: 5px solid #8B5A2B; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    margin: 20px 0; 
+    text-align: justify; 
 }
 
 section {
-    background-color: #f8f5f0; /* Color de fondo cálido y suave para la sección */
+    background-color: #f8f5f0; 
     padding: 30px;
-    border: 2px solid #8B5A2B; /* Borde que recuerda la temática madera */
+    border: 2px solid #8B5A2B; 
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para resaltar la sección */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
 }
 
 .accordion {
-    margin-top: 20px; /* Espacio superior para el acordeón */
+    margin-top: 20px; 
 }
 
 .accordion-item {
-    margin-bottom: 10px; /* Espacio entre los elementos del acordeón */
-    border: 1px solid #8B5A2B; /* Borde color madera */
-    border-radius: 5px; /* Bordes redondeados */
-    overflow: hidden; /* Ocultar contenido desbordante */
+    margin-bottom: 10px; 
+    border: 1px solid #8B5A2B; 
+    border-radius: 5px; 
+    overflow: hidden; 
 }
 
 .accordion-header {
-    background-color: #8B5A2B; /* Color madera algarrobo */
-    color: #fdf6e3; /* Blanco cálido */
+    background-color: #8B5A2B; 
+    color: #fdf6e3; 
     padding: 15px;
-    cursor: pointer; /* Cambiar cursor al pasar el mouse */
-    font-size: 1.5em; /* Tamaño de fuente más grande */
-    font-family: 'Georgia', serif; /* Estilo de fuente rústico */
-    transition: background-color 0.3s, transform 0.3s; /* Suave transición y animación */
-    text-align: center; /* Centrar texto */
-    border-radius: 8px; /* Bordes redondeados */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra ligera */
+    cursor: pointer; 
+    font-size: 1.5em; 
+    font-family: 'Georgia', serif; 
+    transition: background-color 0.3s, transform 0.3s; 
+    text-align: center; 
+    border-radius: 8px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
 }
 
 .accordion-header:hover {
-    background-color: #7B4A2B; /* Color más oscuro al pasar el mouse */
-    transform: scale(1.02); /* Efecto de aumento al pasar el mouse */
+    background-color: #7B4A2B; 
+    transform: scale(1.02); 
 }
 
 .accordion-content {
-    background-color: #f4f4f4; /* Fondo suave para el contenido */
-    color: #4B3621; /* Color marrón oscuro */
+    background-color: #f4f4f4; 
+    color: #4B3621; 
     padding: 15px;
     font-family: 'Verdana', sans-serif;
-    line-height: 1.6; /* Espaciado de líneas */
-    border-left: 5px solid #8B5A2B; /* Borde de acento a la izquierda */
-    border-radius: 0 0 8px 8px; /* Redondear solo la parte inferior */
-    display: none; /* Ocultar contenido por defecto */
+    line-height: 1.6; 
+    border-left: 5px solid #8B5A2B; 
+    border-radius: 0 0 8px 8px; 
+    display: none; 
 }
 
 .accordion-content.active {
-    display: block; /* Mostrar contenido cuando está activo */
-    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra interna */
+    display: block; 
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1); 
 }
 .reloj-image-container {
-    float: left; /* Alinear la imagen a la izquierda */
-    margin-right: 10px; /* Espacio entre la imagen y el texto */
+    float: left; 
+    margin-right: 10px; 
 }
 
 .reloj-image {
-    width: 60px; /* Ajustar el tamaño de la imagen */
-    height: auto; /* Mantener la proporción */
-    border-radius: 5px; /* Bordes redondeados */
+    width: 60px; 
+    height: auto; 
+    border-radius: 5px; 
 }
 
 #tipo-relojes {
@@ -238,7 +238,7 @@ section {
 
 .reloj-card {
     background-color: #ffffff;
-    border: 2px solid #8B5A2B; /* Color madera algarrobo */
+    border: 2px solid #8B5A2B; 
     border-radius: 8px;
     padding: 15px;
     flex: 1;
@@ -255,7 +255,6 @@ section {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-/* Estilos del contenedor del carrusel */
 .carousel-container {
     position: relative;
     width: 100%;
@@ -265,12 +264,12 @@ section {
     border-radius: 15px;
 }
 
-/* Estilos de la imagen del carrusel */
+
 .carousel-image {
     width: 100%;
     height: auto;
     display: block;
-    transition: opacity 1s ease-in-out; /* Transición suave */
+    transition: opacity 1s ease-in-out; 
     border-radius: 15px;
 }
 
@@ -282,7 +281,7 @@ section {
     right: 10px;
 }
 
-/* Indicadores del carrusel */
+
 .carousel-indicators {
     text-align: center;
     margin-top: 10px;
@@ -303,21 +302,21 @@ section {
 }
 
 .contact-form {
-    background: linear-gradient(to bottom right, #ffffff, #f4f4f4); /* Fondo con un degradado sutil */
-    border-radius: 15px; /* Bordes más redondeados */
+    background: linear-gradient(to bottom right, #ffffff, #f4f4f4); 
+    border-radius: 15px;
     padding: 25px 30px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.15); /* Sombra más pronunciada */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15); 
     width: 100%;
     max-width: 100%;
     margin: 20px 0;
     box-sizing: border-box;
-    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out; /* Transiciones para animaciones */
+    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out; 
 }
 
-/* Efecto de sombra y elevación al pasar el mouse sobre el formulario */
+
 .contact-form:hover {
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3); /* Aumentar la sombra */
-    transform: translateY(-5px); /* Elevar el formulario ligeramente */
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3); 
+    transform: translateY(-5px); 
 }
 
 .contact-form h2 {
@@ -325,11 +324,11 @@ section {
     color: #6b4f4f;
     text-transform: uppercase;
     letter-spacing: 1px;
-    transition: color 0.3s ease-in-out; /* Transición para el color del título */
+    transition: color 0.3s ease-in-out; 
 }
 
 .contact-form h2:hover {
-    color: #8B5A2B; /* Cambio de color en el título al pasar el mouse */
+    color: #8B5A2B; 
 }
 
 .form-field {
@@ -337,7 +336,7 @@ section {
     position: relative;
 }
 
-/* Estilo para los inputs */
+
 .form-field input {
     width: 100%;
     padding: 12px;
@@ -347,30 +346,30 @@ section {
     transition: border-color 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Efecto de borde y sombra cuando el input está activo */
+
 .form-field input:focus {
-    border-color: #8B5A2B; /* Color de borde más vibrante */
+    border-color: #8B5A2B; 
     background-color: #fafafa;
-    box-shadow: 0 0 8px rgba(139, 90, 43, 0.4); /* Sombra sutil */
-    outline: none; /* Eliminar el borde predeterminado */
+    box-shadow: 0 0 8px rgba(139, 90, 43, 0.4); 
+    outline: none; 
 }
 
-/* Estilo interactivo cuando el mouse pasa sobre los inputs */
+
 .form-field input:hover {
-    border-color: #6b4f4f; /* Cambio de color al pasar el mouse */
-    background-color: #f5f5f5; /* Fondo ligeramente diferente */
+    border-color: #6b4f4f; 
+    background-color: #f5f5f5; 
 }
 
-/* Mensajes de error */
+
 .error-message {
     font-size: 0.9em;
     color: #e74c3c;
     position: absolute;
-    bottom: -20px; /* Colocar el mensaje justo debajo del input */
+    bottom: -20px; 
     left: 0;
     visibility: hidden;
     opacity: 0;
-    transition: visibility 0s, opacity 0.3s ease-in-out; /* Transición para los mensajes */
+    transition: visibility 0s, opacity 0.3s ease-in-out; 
 }
 
 .form-field input.invalid + .error-message {
@@ -378,7 +377,7 @@ section {
     opacity: 1;
 }
 
-/* Mensaje de éxito */
+
 .success-message {
     color: #28a745;
     text-align: center;
@@ -387,26 +386,26 @@ section {
     transition: color 0.3s ease-in-out;
 }
 
-/* Estilo para el botón */
+
 button {
-    background-color: #6b4f4f; /* Color inicial */
+    background-color: #6b4f4f; 
     color: white;
     border: none;
     padding: 12px 20px;
-    border-radius: 25px; /* Bordes más redondeados */
+    border-radius: 25px; 
     cursor: pointer;
     font-size: 1em;
     transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
     width: 100%;
 }
 
-/* Efecto de animación en el botón */
+
 button:hover {
-    background-color: #8B5A2B; /* Cambio de color */
-    transform: translateY(-2px); /* Elevar el botón ligeramente */
+    background-color: #8B5A2B; 
+    transform: translateY(-2px); 
 }
 
-/* Botón desactivado */
+
 button:disabled {
     background-color: #ccc;
     cursor: not-allowed;
@@ -446,7 +445,7 @@ input {
     display: none;
 }
 
-/* Estilo del Footer */
+
 footer {
     text-align: center;
     margin: 20px auto;
@@ -490,7 +489,7 @@ footer {
     color: #f39c12;
 }
 
-/* Estilo de las Redes Sociales */
+
 .social-icons {
     display: flex;
     justify-content: center;
@@ -507,7 +506,7 @@ footer {
     transform: scale(1.1);
 }
 
-/* Colores Personalizados para Redes Sociales */
+
 .social-icons a[aria-label="Facebook"] {
     color: #3b5998;
 }
