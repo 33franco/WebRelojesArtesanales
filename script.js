@@ -1,60 +1,60 @@
-// Definir el array con las imágenes del carrusel
+
 const images = ['reloj.jpg',  'reloj1.jpeg', 'reloj2.jpg', 'reloj3.jpg', 'reloj4.jpeg', 'reloj5.jpg', 'reloj6.jpeg', 'reloj7.jpg'];
 let currentIndex = 0;
 let autoSlideInterval;
 
-// Función para actualizar la imagen en el carrusel
+
 function updateImage() {
     const imgElement = document.getElementById('carouselImage');
     const indicators = document.querySelectorAll('.indicator');
 
     if (imgElement) {
-        imgElement.style.opacity = '0'; // Añadir transición de opacidad
+        imgElement.style.opacity = '0'; 
         setTimeout(() => {
             imgElement.src = 'img/' + images[currentIndex];
             imgElement.style.opacity = '1';
-        }, 500); // Tiempo de transición para la opacidad
+        }, 500); 
 
-        // Actualizar los indicadores
+       
         indicators.forEach((indicator, index) => {
             indicator.classList.toggle('active', index === currentIndex);
         });
     }
 }
 
-// Función para avanzar en el carrusel
+
 function nextImage() {
     currentIndex = (currentIndex + 1) % images.length;
     updateImage();
 }
 
-// Función para retroceder en el carrusel
+
 function prevImage() {
     currentIndex = (currentIndex - 1 + images.length) % images.length;
     updateImage();
 }
 
-// Función para iniciar el auto deslizamiento
+
 function startAutoSlide() {
-    autoSlideInterval = setInterval(nextImage, 3000); // Cambia la imagen cada 3 segundos
+    autoSlideInterval = setInterval(nextImage, 3000); 
 }
 
-// Detener el auto deslizamiento cuando el usuario interactúa con los botones
+
 function stopAutoSlide() {
     clearInterval(autoSlideInterval);
 }
 
-// Inicializar eventos del carrusel cuando la página cargue
+
 document.addEventListener("DOMContentLoaded", () => {
     const nextBtn = document.getElementById('nextBtn');
     const prevBtn = document.getElementById('prevBtn');
     const indicators = document.querySelectorAll('.indicator');
 
-    // Agregar eventos para los botones de navegación
+    
     nextBtn.addEventListener('click', () => {
-        stopAutoSlide(); // Detener auto deslizamiento cuando se hace clic
+        stopAutoSlide(); 
         nextImage();
-        startAutoSlide(); // Reanudar auto deslizamiento
+        startAutoSlide(); 
     });
 
     prevBtn.addEventListener('click', () => {
@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
         startAutoSlide();
     });
 
-    // Agregar eventos para los indicadores
+   
     indicators.forEach((indicator, index) => {
         indicator.addEventListener('click', () => {
             stopAutoSlide();
@@ -73,26 +73,26 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // Inicializar la primera imagen y comenzar el auto deslizamiento
+    
     updateImage();
     startAutoSlide();
 
     
-    // Menú desplegable
+    
     document.addEventListener('DOMContentLoaded', () => { 
         const inicioLink = document.getElementById('inicio-link');
     
         inicioLink.addEventListener('click', (event) => {
-            event.preventDefault(); // Evitar el comportamiento por defecto del enlace
+            event.preventDefault(); 
             
-            // Reiniciar la página
-            window.location.href = window.location.pathname; // Recargar la página actual
+         
+            window.location.href = window.location.pathname; 
         });
     });
     window.onload = function() {
-        const form = document.getElementById('tuFormulario'); // Cambia 'tuFormulario' por el ID real de tu formulario
+        const form = document.getElementById('tuFormulario'); 
         if (form) {
-            form.reset(); // Resetea los campos del formulario
+            form.reset(); 
         }
     };
         
@@ -112,12 +112,12 @@ document.addEventListener("DOMContentLoaded", () => {
         const menu = document.getElementById('menu');
         const menuLinks = document.querySelectorAll('#menu a');
     
-        // Mostrar/Ocultar menú al hacer clic en el botón
+     n
         menuButton.addEventListener('click', () => {
             menu.classList.toggle('visible');
         });
     
-        // Ocultar el menú al hacer clic en una opción
+       
         menuLinks.forEach(link => {
             link.addEventListener('click', () => {
                 menu.classList.remove('visible');
@@ -126,7 +126,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
     
 
-    // Acordeón
+    
     const headers = document.querySelectorAll('.accordion-header');
     if (headers.length > 0) {
         headers.forEach(header => {
@@ -146,7 +146,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 document.addEventListener('DOMContentLoaded', () => {
-    // Referencias a los elementos del formulario
+    
     const contactForm = document.getElementById('contactForm');
     const nameInput = document.getElementById('name');
     const emailInput = document.getElementById('email');
@@ -154,16 +154,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const formResponse = document.getElementById('formResponse');
     const submitBtn = document.getElementById('submitBtn');
 
-    // Mensajes de error
+   
     const nameError = document.getElementById('nameError');
     const emailError = document.getElementById('emailError');
     const phoneError = document.getElementById('phoneError');
 
-    // Expresiones regulares
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;  // Email válido
-    const phoneRegex = /^\d{10}$/;  // Teléfono de 10 dígitos
-
-    // Validación de campo en tiempo real
+   
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;  
+    const phoneRegex = /^\d{10}$/;  
+    
     function validateField(input, regex, errorDiv, errorMsg) {
         if (input.value.trim() === "") {
             errorDiv.textContent = "Este campo es obligatorio.";
@@ -183,7 +182,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Validar todos los campos antes de permitir el envío
+    
     function validateForm() {
         const isNameValid = validateField(nameInput, /.{3,}/, nameError, "El nombre debe tener al menos 3 caracteres.");
         const isEmailValid = validateField(emailInput, emailRegex, emailError, "Por favor, ingrese un email válido.");
@@ -192,30 +191,30 @@ document.addEventListener('DOMContentLoaded', () => {
         submitBtn.disabled = !(isNameValid && isEmailValid && isPhoneValid);
     }
 
-    // Validar campos en tiempo real
+   
     [nameInput, emailInput, phoneInput].forEach(input => {
         input.addEventListener('input', validateForm);
         input.addEventListener('blur', validateForm);
     });
 
-    // Manejar el evento de envío del formulario
+   
     contactForm.addEventListener('submit', function (event) {
-        event.preventDefault();  // Evitar envío por defecto
+        event.preventDefault();  
 
         if (!submitBtn.disabled) {
-            // Crear mensaje de éxito con los datos
-            formResponse.innerHTML = "";  // Limpiar mensajes anteriores
+            
+            formResponse.innerHTML = "";  
             const successMessage = document.createElement('p');
             successMessage.className = 'success-message';
             successMessage.textContent = `Mensaje enviado exitosamente! Nombre: ${nameInput.value}, Email: ${emailInput.value}, Teléfono: ${phoneInput.value}`;
 
-            // Agregar el mensaje al contenedor
+            
             formResponse.appendChild(successMessage);
 
-            // Resetear el formulario
+            
             contactForm.reset();
 
-            // Deshabilitar botón nuevamente
+       
             submitBtn.disabled = true;
         }
     });
